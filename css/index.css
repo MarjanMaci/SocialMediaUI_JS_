@@ -1,0 +1,292 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+p{
+    font-size: 0.9vw;
+    overflow: auto;
+}
+span{
+    font-size: 0.9vw;
+    
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#main-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 3em 2em;
+}
+.card{
+    width: 100%;
+    height: 75vh;
+    box-shadow: 0 0 10px rgb(214, 214, 214);
+    display: flex;
+    flex-direction: column;
+}
+.top-card{
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+.profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.profile-img{
+    width: 50px;
+    height: 50px;
+    
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.main-image{
+    width: 100%;
+    height: 55%;
+    padding: 0 1em;
+    background-color: whitesmoke;
+}
+.main-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-text{
+    padding: 0.7em 1em 0.5em 1em;
+    background-color: whitesmoke;
+    gap: 0.5em;
+    height: 30%;
+}
+.card-text p{
+    height: 75%;
+    border-bottom: 0.2px solid rgb(167, 164, 164);
+    padding-bottom: 10px;
+}
+.likes{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.likes span{
+    padding-left: 2%;
+}
+.name-date p:first-child{
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+#load{
+    color: white;
+    background-color: rgb(29, 148, 216);
+    text-align: center;
+    padding: 1em 2em;
+    border: 0;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 3%;
+    font-weight: bold;
+}
+#button{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.icon{
+    width: 24px;
+    height: 28px;
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+
+#clicked-card-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: none;
+}
+#clicked-card{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 1em;
+}
+.clicked-card-image{
+    width: 55%;
+    height: 100%;
+}
+.clicked-card-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.clicked-card-text{
+    width: 45%;
+    height: 100%;
+}
+.clicked-card-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.clicked-card-profile-content{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.clicked-card-profile-content img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.clicked-card-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+.clicked-card-description div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.clicked-card-name-date p:first-child{
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+.clicked-card-description p{
+    font-size: 1vw;
+}
+.clicked-card-name-date p:last-child{
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+    .name-date p:first-child{
+        font-size: 4.5vw;
+    }
+    .card{
+        height: 80vh
+    }
+    p{
+        font-size: 3.5vw;
+        overflow: auto;
+    }
+    span{
+        font-size: 3.5vw;
+    }
+    .card-text{
+        height: 30%;
+    }
+    #main-container{
+        padding: 2em 1em;
+    }
+    #load{
+        font-size: 4.2vw;
+        padding: 0.5em 1em;
+    }
+    .clicked-card-profile{
+        height: 100%;
+    }
+    .clicked-card-profile-content{
+        height: 20%;
+    }
+    .clicked-card-description{
+        height: 80%;
+    }
+    .clicked-card-description p{
+        font-size: 3.5vw;
+    }
+    .clicked-card-name-date p:first-child{
+        font-size: 4.5vw;
+        overflow: auto;
+        font-weight: bold;
+    }
+    .clicked-card-name-date p:last-child{
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .name-date p:first-child{
+        font-size: 2.7vw;
+    }
+    .card{
+        height: 55vh
+    }
+    p{
+        font-size: 2.4vw;
+        overflow: auto;
+    }
+    span{
+        font-size: 2.4vw;
+    }
+    .main-image{
+        height: 48%;
+    }
+    .card-text{
+        height: 37%;
+    }
+    .top-card{
+        padding: 1em 1em 0.5em 1em;
+    }
+    #main-container{
+        padding: 4em 3em;
+    }
+    #load{
+        font-size: 3.2vw;
+        padding: 0.5em 1em;
+    }
+    .clicked-card-profile{
+        height: 100%;
+    }
+    .clicked-card-profile-content{
+        height: 20%;
+    }
+    .clicked-card-description{
+        height: 80%;
+    }
+    .clicked-card-description p{
+        font-size: 3.0vw;
+    }
+    .clicked-card-name-date p:first-child{
+        font-size: 4.0vw;
+        overflow: auto;
+        font-weight: bold;
+    }
+    .clicked-card-name-date p:last-child{
+        font-size: 3.0vw;
+    }
+    span{
+        font-size: 3.0vw;
+    }
+}
